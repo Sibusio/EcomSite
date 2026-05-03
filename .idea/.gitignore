@@ -10,7 +10,8 @@
 /httpRequests/
 
 #IntelliJ
-*.idea/
+.idea/
+Ecom\.idea
 *.iml
 
 #Build output
