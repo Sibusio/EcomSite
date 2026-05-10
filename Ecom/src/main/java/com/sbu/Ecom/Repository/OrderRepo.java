@@ -1,2 +1,12 @@
-package com.sbu.Ecom.Repository;public interface OrderRepo {
+package com.sbu.Ecom.Repository;
+
+import com.sbu.Ecom.Model.Order;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface OrderRepo extends JpaRepository<Order, Integer> {
+    Optional<Order> findByOrderId(String orderId);
 }

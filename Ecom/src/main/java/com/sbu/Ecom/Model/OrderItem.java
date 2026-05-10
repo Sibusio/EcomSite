@@ -13,6 +13,7 @@ import java.math.BigDecimal;
 @Builder
 public class OrderItem {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int orderItemId;
 
     //One Product can have many OrderItems

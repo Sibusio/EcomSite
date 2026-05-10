@@ -2,11 +2,8 @@ package com.sbu.Ecom.Model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -18,6 +15,7 @@ import java.util.List;
 @Setter
 public class Order {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     //Because frontend is BigString
     @Column(unique = true)
